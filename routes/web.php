@@ -39,7 +39,7 @@ Route::get('/blog/{url}', [HomeController::class, 'blogDetails'])->name('blogDet
 Route::post('/blog/comment/{post}', [HomeController::class, 'saveComment']);
 Route::get('/donation/{url}', [HomeController::class, 'donation'])->name('donation_details');
 Route::get('/donate/{url}', [HomeController::class, 'donate'])->name('donate');
-Route::get('/events/{type?}', [HomeController::class, 'events']);
+Route::get('/events/{type?}', [HomeController::class, 'events'])->name('evnts');
 Route::get('/mission', [HomeController::class, 'mission']);
 Route::get('/vision', [HomeController::class, 'vision']);
 Route::get('/objectives', [HomeController::class, 'objectives']);

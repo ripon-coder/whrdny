@@ -33,7 +33,7 @@
 		</ul>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link main-a @if(url()->current() == url('/news-events'))active @endif" href="{{url('/news-events')}}">Events</a>
+		<a class="nav-link main-a @if(url()->current() == url('/events'))active @endif" href="{{url('/events')}}">Events</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link main-a @if(url()->current() == url('/what-we-do'))active @endif" href="{{url('/what-we-do')}}">What We Do</a>

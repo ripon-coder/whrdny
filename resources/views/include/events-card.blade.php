@@ -4,7 +4,7 @@
 	</div>
 	<div class="event_text_cnt">
 		<div class="ucoming_evnt_txt_cont">
-			<div class="ucoming_evnt_date">{{ date('F d, Y @ h:i A', strtotime($item->end_date_time)) }}</div>
+			<div class="ucoming_evnt_date">{{ date('F d, Y @ h:i A', strtotime($item->start_date_time)) }}</div>
 
 			<h4 class="ucoming_evnt_title"><a href="{{route('event',$item->slug)}}">{{$item->title}}</a></h4>
 

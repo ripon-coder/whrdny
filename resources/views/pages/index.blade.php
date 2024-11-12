@@ -73,7 +73,7 @@
             <div class="container">
                 <div class="text-center position-relative">
                     <h2 class="h2-title pb-2">TOGETHER WE CAN <br> MAKE A DIFFERENCE</h2>
-                    <p class="pfs-17">As a USA based, nonprofit organization, US Bangla Foundation Inc. helps<br>empower
+                    <p class="pfs-17">As a USA based, nonprofit organization, World Human Rights Development USA (WHRD). helps<br>empower
                         people to live with greater independence and freedom from poverty,<br>disease, disaster, and hunger.
                     </p>
                     <a class="btn btn_overly btn-yellow" href="{{ url('/how-we-work') }}"><span>Know More</span></a>
