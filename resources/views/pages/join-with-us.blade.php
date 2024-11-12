@@ -1,3 +1,13 @@
+@php
+$num1 = $c_setting->address_one_mobile;
+$num2 = '';
+if (strpos($c_setting->address_one_mobile, ',') !== false) {
+    $numbersArray = explode(',', $c_setting->address_one_mobile);
+    $num1 = $numbersArray[0];
+    $num2  = $numbersArray[1];
+}
+@endphp
+
 @extends('master')
 
 @section('title', 'How we work')
@@ -140,13 +150,14 @@
                 </div>
             </div>
         </div>
+        
         <div class="quick-ask-area text-center mt-5">
             <h2 class="page-title text-capitalize" style="font-weight: 400;">Any Queries? Give Us a Call At <b><a
-                        href="tel:(718) 205-2360"><strong>(718) 205-2360</strong></a></b></h2>
+                        href="tel:{{$num1}}"><strong>{{$num1}}</strong></a></b></h2>
             <p style="font-size: 16px;">We are always here to help the needy peoples any where in the world.</p>
             <div class="calout-btn mt-4 pt-2">
                 <a style="height: 50px;line-height: 50px;" class="btn btn_overly btn-yellow px-4"
-                    href="tel:(718) 205-2360"><span>Contact Now</span></a>
+                    href="tel:{{$num1}}"><span>Contact Now</span></a>
             </div>
         </div>
     </div>

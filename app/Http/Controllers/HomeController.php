@@ -239,6 +239,7 @@ class HomeController extends Controller
 	{
 		$data['page_name'] = "join With Us";
         $data['forms'] = AdmissionForm::get();
+		$data['c_setting'] = Setting::first();
 		return view('pages.join-with-us', $data);
 	}
 	public function eventSearch(Request $request){
