@@ -1,0 +1,181 @@
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+a, 
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Rubik', sans-serif;
+}
+
+.admin-topbar {
+    background: #343A40 !important
+}
+
+.admin-bg {
+    background: #212529 !important;
+}
+.summery-title h3 {
+    font-size: 31px;
+    font-family: sans-serif;
+}
+
+.main-menu .navigation.navigation-main>li.active>a {
+    padding: 5px 30px 4px 5px;
+    background: transparent;
+    color: #fff;
+}
+
+
+.main-menu .navigation.navigation.admin-bg>li>ul {
+    background: transparent;
+}
+
+.main-menu .navigation.navigation-main li a {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 14.5px;
+    padding: 3px 30px 4px 18px;
+}
+
+.main-menu.menu-light .navigation>li.open>a {
+    color: #fff;
+}
+
+body.vertical-layout.vertical-menu.menu-collapsed .main-menu .navigation>li>a {
+    padding: 5px 15px 5px 15px;
+}
+
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation li.has-sub>a:not(.mm-next):after {
+    top: 6px;
+}
+
+
+.vertical-overlay-menu .main-menu .navigation li.has-sub>a:not(.mm-next):after {
+    top: 6px;
+}
+
+thead {
+    background: #343A40;
+    color: #fff;
+    font-size: 14px;
+}
+
+thead tr th {
+    padding: 4px;
+}
+
+tbody tr td,
+thead tr th {
+    font-size: 13px;
+}
+
+.card-header {
+    padding: 0;
+}
+
+.card-header .card-title {
+    color: #fff;
+    background: #343A40;
+    padding: 0.75rem 1.25rem;
+    border-radius: calc(0.40rem - 1px) calc(0.40rem - 1px) 0 0;
+}
+
+body.vertical-layout.vertical-menu.menu-collapsed .navbar .navbar-header {
+    width: 260px;
+}
+
+.main-menu.menu-light .navigation>li ul .active>a {
+    color: #fff;
+    background: transparent;
+}
+
+.main-menu.menu-light .navigation>li ul li>a {
+    padding: 3px 5px 3px 50px;
+}
+
+
+.main-menu.menu-light .navigation>li.open>ul>li:hover>a {
+    padding: 3px 30px 3px 55px;
+}
+
+.main-menu.menu-light .navigation>li.open>ul>li:hover.active>a {
+    padding: 3px 0 3px 45px;
+}
+body.vertical-layout.vertical-menu.menu-collapsed .navbar .navbar-brand {
+    padding: 13px 0px;
+}
+
+
+.dropdown .dropdown-menu {
+    border: 1px solid #a1b0c4;
+}
+
+.vertical-overlay-menu .main-menu .navigation>li.hover>a {
+    padding-left: 18px;
+}
+
+
+.dropdown-menu.admin-bg .dropdown-item:hover,
+.dropdown-menu.admin-bg .dropdown-item:focus {
+    color: #000 !important;
+}
+
+.modal-content .modal-header{
+    background-color: #212529 !important;
+}
+
+.modal-content .modal-header .close{
+    color: #fff;
+}
+
+body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content>ul.menu-content li a {
+    display: block;
+    padding: 5px 20px 5px 20px;
+    transition: all 0.2s ease;
+}
+
+body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content>span.menu-title,
+body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content a.menu-title {
+    background-color: #212529;
+}
+
+
+.header-navbar .navbar-header .navbar-brand {
+    padding: 13px 0px;
+}
+
+/* Ripon */
+.btn-style{
+    padding-right: 3px;
+}
+
+.page-link:hover {
+    color: #fff;
+    background-color: rgb(101, 205, 166);
+    border-color: #fff;
+}
+
+.copyright{
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+@media (max-width: 767.98px) {
+
+    .navbar-light .navbar-header .navbar-nav .nav-link,
+    .navbar-semi-light .navbar-header .navbar-nav .nav-link {
+        color: #fff;
+    }
+}
