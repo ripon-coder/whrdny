@@ -96,9 +96,11 @@
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="copyright text-center d-md-flex justify-content-center align-items-center">
-				<p class="copyright mb-0"><span class="txt-block copyright_text">Copyright © World human rights development USA {{date('Y')}}. Powerd by</span></p>
+				<p class="copyright mb-0"><span class="txt-block copyright_text">Copyright © World Human Rights Development USA (WHRD) {{date('Y')}}. Powered by</span></p>
 				<div class="single-image copyright_img ms-md-1 mt-2 mt-md-0">
+					<a href="https://bijoytech.com" target="_blank">
 					<img src="{{asset('assets/images/bijoytech.png')}}" alt="logo of bijoytech">
+					</a>
 				</div>
 			</div>
 		</div>

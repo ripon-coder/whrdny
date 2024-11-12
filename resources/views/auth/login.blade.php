@@ -64,7 +64,7 @@
                                             @endif
                                         </div>
                                     </div>
-                                    <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Powerd by Bijoytech</span>
+                                    <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Powered by Bijoytech</span>
                                     </h6>
                                 </div>
                                 <div class="card-content">
