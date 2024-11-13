@@ -29,7 +29,7 @@ $final_percentage = round($percentange);
 			<p class="donation_stats">Raised: <span class="fw-5">${{number_format($item->donation_sum_raise,2, '.', ',')}}</span> / Goal: ${{$item->goal}}</p>
 
 			@if(url()->current() != url('/'))
-			<p class="cause-txt">{{App\Helper\Help::str(strip_tags($item->details),150)}}</p>
+			<p class="cause-txt">{{App\Helper\Help::str(strip_tags($item->details),145)}}</p>
 			@endif
 
 			@if(url()->current() == url('/causes-list'))
