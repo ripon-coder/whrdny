@@ -49,6 +49,37 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script>
         // Function to handle button click action
+        $(document).ready(function() {
+            // Check if the "event" parameter exists in the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventParam = urlParams.get('event');
+
+            // If there's an event in the URL, trigger the corresponding event, otherwise follow the button click logic
+            if (eventParam) {
+                handleEventFromURL(eventParam); // Call a function to handle the event from the URL
+            } else {
+                // Call the function to handle the button click for the first button
+                handleButtonClick($('#event_button button:first'));
+            }
+
+            // Attach click event handler to all buttons
+            $('#event_button button').click(function() {
+                handleButtonClick(this);
+            });
+        });
+
+        // Function to handle event from URL
+        function handleEventFromURL(eventParam) {
+            // Find the button with the data-event attribute that matches the eventParam
+            var select = $('#event_button button[data-event="' + eventParam + '"]');
+            if (select.length) {
+                handleButtonClick(select); // Trigger the button click logic for this event
+            } else {
+                console.log('No button found for event:', eventParam);
+            }
+        }
+
+        // Function to handle button click
         function handleButtonClick(button) {
             var select = $(button);
             $('#event_button button').removeClass("btn-default").addClass('btn-yellow');
@@ -77,15 +108,6 @@
             });
         }
 
-        // Call the function to handle the button click for the first button
-        $(document).ready(function() {
-            handleButtonClick($('#event_button button:first'));
-        });
-
-        // Attach click event handler to all buttons
-        $('#event_button button').click(function() {
-            handleButtonClick(this);
-        });
 
 
         $(function() {

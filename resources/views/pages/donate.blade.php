@@ -6,6 +6,32 @@
 @section('style')
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <style>
+
+
+    /* Make radio button circular */
+    .form-check-input[type="radio"] {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgb(46, 44, 44); /* Default border color */
+    }
+
+    /* Change color when selected */
+    .form-check-input[type="radio"]:checked {
+      background-color: rgb(46, 44, 44);
+      border-color: rgb(46, 44, 44);
+    }
+
+    /* Optional: hover effect */
+    .form-check-input[type="radio"]:hover {
+      border-color: rgb(46, 44, 44);
+    }
+
+
+
+
+
+
         .give-goal-progress {
             margin-bottom: 20px;
             clear: both;
@@ -58,7 +84,8 @@
         }
 
         .donate_btn>button {
-            font-size: 17px
+            font-size: 17px;
+            background-color:#b8b6b6
         }
 
         .select_payment_method>h3 {
@@ -130,6 +157,13 @@
                                             Credit Card
                                         </label>
                                     </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="debit_card_donation"
+                                            name="method">
+                                        <label class="form-check-label" for="debit_card_donation">
+                                            Debit Card
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="select_payment_method mt-2">
                                     <h3>Personal Info</h3>
@@ -149,13 +183,12 @@
                                 </div>
                                 <div class="additonal_place d-none">
                                     <ul class="pl-4 pt-3">
-                                        <li>Write a check payable to "US Bangla BD"</li>
-                                        <li>On the memo line of the check, indicate that the donation is for "US Bangla BD"
+                                        <li>Write a check payable to "World Human Rights Development USA Inc"</li>
+                                        <li>On the memo line of the check, indicate that the donation is for "World Human Rights Development USA Inc"
                                         </li>
-                                        <li>Mail your check to:</li>
-                                        <li>US Bangla BD</li>
-                                        <li>111 Not A Real St.</li>
-                                        <li>Anytown, CA 12345</li>
+                                        <li>Mail your check to: World Human Rights Development USA Inc</li>
+                                        <li>155-14, 115th Drive</li>
+                                        <li>Jamaica, Queens, NY 11434</li>
 
                                         <li>Your tax-deductible donation is greatly appreciated!</li>
                                     </ul>

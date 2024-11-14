@@ -40,6 +40,7 @@ Route::post('/blog/comment/{post}', [HomeController::class, 'saveComment']);
 Route::get('/donation/{url}', [HomeController::class, 'donation'])->name('donation_details');
 Route::get('/donate/{url}', [HomeController::class, 'donate'])->name('donate');
 Route::get('/events/{type?}', [HomeController::class, 'events'])->name('evnts');
+Route::get('/more-events/{type?}', [HomeController::class, 'MoreEvents'])->name('more-evnts');
 Route::get('/mission', [HomeController::class, 'mission']);
 Route::get('/vision', [HomeController::class, 'vision']);
 Route::get('/objectives', [HomeController::class, 'objectives']);

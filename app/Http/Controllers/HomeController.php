@@ -29,12 +29,13 @@ class HomeController extends Controller
 {
 	public function index()
 	{
+		$now = Carbon::now();
 		$data['posts'] = Post::withCount('comment')->latest()->limit(10)->get();
 		$data['sliders'] = Slider::whereStatus('published')->get();
 		$data['brands'] = Brand::whereStatus('published')->get();
 		$data['events'] = Event::whereStatus('published')->orderBy("id","desc")->limit(6)->get();
 		$data['learnings'] = Learning::latest()->take(6)->get();
-		$data['upcoming_events'] = Event::whereStatus('published')->where("upcoming", true)->orderBy("id", "desc")->get();
+		$data['upcoming_events'] = Event::whereStatus('published')->where('start_date_time', '>', $now)->orderBy("id", "desc")->get();
 		$data['fund_raises'] = FoundRaise::whereStatus('published')->withSum('donation', 'raise')->withCount('donation')->orderBy('id', 'DESC')->limit(4)->get();
         $data['latest_found'] = FoundRaise::whereStatus('published')->withSum('donation', 'raise')->withCount('donation')->latest()->first();
         //dd($data['latest_found']->toArray());
@@ -175,11 +176,26 @@ class HomeController extends Controller
 	}
 	public function events($type = null)
 	{
+		$now = Carbon::now();
+
 		$data['page_name'] = "Events";
-		$data['current_event'] = Event::whereStatus("published")->where('end_date_time','>=', Carbon::now())->get();
-		$data['upcoming_event'] = Event::whereStatus("published")->where('upcoming',true)->get();
-		$data['past_event'] = Event::whereStatus("published")->where('end_date_time','<=', Carbon::now())->get();
-		return view('pages.events', $data);
+		$data['current_event'] = Event::whereStatus("published")->where('start_date_time', '<=', $now)->where('end_date_time', '>=', $now)
+		->orderBy('start_date_time', 'asc')->limit(3)->get();
+		$data['upcoming_event'] = Event::whereStatus("published")->where('start_date_time', '>', $now)
+		->orderBy('start_date_time', 'asc')->limit(3)->get();
+		$data['past_event'] = Event::whereStatus("published")->where('end_date_time', '<', $now)
+		->orderBy('end_date_time', 'desc')->limit(3)->get();
+		return view('pages.event-primary', $data);
+	}
+	public function MoreEvents($type = null){
+		$data['page_name'] = "Events";
+		// $data['current_event'] = Event::whereStatus("published")->where('start_date_time', '<=', $now)->where('end_date_time', '>=', $now)
+		// ->orderBy('start_date_time', 'asc')->limit(3)->get();
+		// $data['upcoming_event'] = Event::whereStatus("published")->where('start_date_time', '>', $now)
+		// ->orderBy('start_date_time', 'asc')->limit(3)->get();
+		// $data['past_event'] = Event::whereStatus("published")->where('end_date_time', '<', $now)
+		// ->orderBy('end_date_time', 'desc')->limit(3)->get();
+		return view('pages.events',$data);
 	}
 	public function mission()
 	{

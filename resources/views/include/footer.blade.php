@@ -44,7 +44,7 @@
                                 </div>
 
                                 <div class="d-flex mb-1"><i class="fa fa-map-marker"></i>
-                                    {{ strip_tags(@$g_settings->address_two_address)  }}</div>
+                                    {!! @$g_settings->address_two_address  !!}</div>
                             </div>
                         </div>
                     </div>
